@@ -78,8 +78,13 @@
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
+                                            <a href="/hapus" onclick="confirm('Perhatian!!!\nAkun anda akan dihapus secara permanen, dan tidak bisa dikembalikan.\nYakin?')">
+                                                <i class="fa fa-user-times"></i> Hapus akun!
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a href="/logout">
-                                                <i class="feather icon-log-out"></i> Logout
+                                                <i class="fa fa-sign-out"></i></i> Logout
                                             </a>
                                         </li>
                                     </ul>

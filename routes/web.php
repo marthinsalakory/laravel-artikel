@@ -29,6 +29,7 @@ if (isLogin()) {
     Route::get('/like', [ArtikelController::class, 'like']);
     Route::get('/unlike', [ArtikelController::class, 'unlike']);
     Route::get('/hapus_artikel', [ArtikelController::class, 'hapus_artikel']);
+    Route::get('/hapus', [AuthController::class, 'hapus']);
 
     Route::get('/login', [ArtikelController::class, 'index']);
     Route::get('/register', [ArtikelController::class, 'index']);
@@ -43,6 +44,7 @@ if (isLogin()) {
     Route::get('/unlike', [AuthController::class, 'login']);
     Route::get('/hapus_artikel', [AuthController::class, 'login']);
 
+    Route::get('/hapus', [AuthController::class, 'login']);
     Route::get('/login', [AuthController::class, 'login']);
     Route::get('/register', [AuthController::class, 'register']);
     Route::post('/register/add', [AuthController::class, 'add']);

@@ -66,6 +66,14 @@ class AuthController extends Controller
         return redirect('/register');
     }
 
+    public function hapus()
+    {
+        $user = new User();
+        unlink('assets/img/profile/' . user()['foto']);
+        $user->where('id', '=', user()['id'])->delete();
+        return redirect('/logout');
+    }
+
     public function logout()
     {
         if (isset($_SESSION['login'])) {
