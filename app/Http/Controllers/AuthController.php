@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
+use App\Models\komentar;
+use App\Models\LikeArtikel;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -69,8 +71,34 @@ class AuthController extends Controller
     public function hapus()
     {
         $user = new User();
+        $artikel = new Artikel();
+        $komentar = new komentar();
+        $like = new LikeArtikel();
+
+        // hapus foto
         unlink('assets/img/profile/' . user()['foto']);
+
+        // hapus tabel like bila ada
+        if ($like->where('id_user', '=', user()['id'])->count() > 0) {
+            $like->where('id_user', '=', user()['id'])->delete();
+        }
+        // hapus tabel komentar bila ada
+        if ($komentar->where('id_user', '=', user()['id'])->count() > 0) {
+            $komentar->where('id_user', '=', user()['id'])->delete();
+        }
+
+        // hapus artikel yang dibuat user bila ada
+        if ($artikel->where('id_user', '=', user()['id'])->count() > 0) {
+            foreach ($artikel->where('id_user', '=', user()['id'])->get() as $a) {
+                unlink('assets/img/artikel/' . $a['foto']);
+            }
+            $artikel->where('id_user', '=', user()['id'])->delete();
+        }
+
+        // hapus akun
         $user->where('id', '=', user()['id'])->delete();
+
+        // kembalikan ke logout
         return redirect('/logout');
     }
 

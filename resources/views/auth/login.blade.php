@@ -23,11 +23,11 @@
                                 </div>
                             </div>
                             <div class="form-group form-primary">
-                                <input type="email" name="email" class="form-control" required="" placeholder="Your Email Address">
+                                <input type="email" name="email" class="form-control" required="" placeholder="Masukan alamat email">
                                 <span class="form-bar"></span>
                             </div>
                             <div class="form-group form-primary">
-                                <input type="password" name="password" class="form-control" required="" placeholder="Password">
+                                <input type="password" name="password" class="form-control" required="" placeholder="Kata sandi">
                                 <span class="form-bar"></span>
                             </div>
                             <div class="row m-t-30">

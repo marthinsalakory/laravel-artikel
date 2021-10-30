@@ -78,7 +78,7 @@
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
-                                            <a href="/hapus" onclick="confirm('Perhatian!!!\nAkun anda akan dihapus secara permanen, dan tidak bisa dikembalikan.\nYakin?')">
+                                            <a href="/hapus" onclick=" return confirm('Perhatian!!!\nAkun anda akan dihapus secara permanen, dan tidak bisa dikembalikan.\n\nLanjutkan?');">
                                                 <i class="fa fa-user-times"></i> Hapus akun!
                                             </a>
                                         </li>
