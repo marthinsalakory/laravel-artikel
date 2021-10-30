@@ -72,7 +72,7 @@
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/assets/img/profile/{{ user()['foto'] }}" class="img-radius" alt="User-Profile-Image">
+                                        <img height="30px" width="30px" src="/assets/img/profile/{{ user()['foto'] }}" class="img-radius" alt="User-Profile-Image">
                                         <span>{{ user()['fullname'] }}</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>

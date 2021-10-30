@@ -23,7 +23,7 @@
                                                         <div class="col-md-12">
                                                             <div class="media-left">
                                                                 <a href="#" class="profile-image">
-                                                                    <img width="100px" class="user-img img-radius" src="/assets/img/profile/{{ user()['foto'] }}" alt="user-img">
+                                                                    <img height="100px" width="100px" class="user-img img-radius" src="/assets/img/profile/{{ user()['foto'] }}" alt="user-img">
                                                                 </a>
                                                             </div>
                                                             <div class="media-body row">

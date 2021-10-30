@@ -100,6 +100,9 @@ class ArtikelController extends Controller
 
     public function hapus_artikel(Request $req)
     {
+        $artikel = new Artikel();
+        $artikel = $artikel->where('id', '=', $req->id)->first();
+        unlink('assets/img/artikel/' . $artikel['foto']);
         Artikel::where('id', '=', $req->id)->delete();
         komentar::where('id_artikel', '=', $req->id)->delete();
         return redirect('/');
